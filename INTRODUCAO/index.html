@@ -19,7 +19,8 @@
         </p>
         <button v-if = "!condicao" v-on:click="usuarioClicou">Salvar</button>
         <button v-if="condicao" v-on:click="usuarioClicou">Garregando . . .</button>
-
+        <input type="text" v-model = "usuario.nome"><br>
+        <p>nome:{{usuario.nome}}</p>
 
     </div>
     <script type="text/javascript">
@@ -36,7 +37,11 @@
                     {titulo:'registro4'},
                     {titulo:'registro5'}
                     
-                ]
+                ],
+                usuario:{
+                    nome:""
+                }
+                
             },
             methods:{
                 usuarioClicou: function(){
