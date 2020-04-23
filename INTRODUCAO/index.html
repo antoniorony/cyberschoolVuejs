@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Vue Js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+
+        <p v-bind:title="titulo">Teste com TITLE</p>
+        <p v-if="condicao">Testando Condições</p>
+        <p v-if="5<8">Testando Condições</p>
+        <p v-if="condicao" v-for="variavel in registro">
+            {{variavel.titulo}}
+        </p>
+        <button v-if = "!condicao" v-on:click="usuarioClicou">Salvar</button>
+        <button v-if="condicao" v-on:click="usuarioClicou">Garregando . . .</button>
+
+
+    </div>
+    <script type="text/javascript">
+        var app = new Vue({
+            el:"#app",
+            data:{
+                msg:"INICIANDO COM VUE JS",
+                titulo:"Novo Title",
+                condicao:false,
+                registro:[
+                    {titulo:'registro1'},
+                    {titulo:'registro2'},
+                    {titulo:'registro3'},
+                    {titulo:'registro4'},
+                    {titulo:'registro5'}
+                    
+                ]
+            },
+            methods:{
+                usuarioClicou: function(){
+                    this.condicao = !this.condicao;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
