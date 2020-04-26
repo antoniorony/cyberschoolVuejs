@@ -8,14 +8,20 @@
 </head>
 <body>
     <div id="app">
-       <gui-titulo></gui-titulo>
+       <cyber-titulo v-bind:titulo = "meuTitulo"></cyber-titulo>
+       <input type="text" v-model = "meuTitulo">
     </div>
     <script type="text/javascript">
-    Vue.component('gui-titulo', {
-        template:'<h2>Component de titulo</h2>'
+    Vue.component('cyber-titulo', {
+        props:['titulo'],
+        template:'<h2>{{titulo}}</h2>'
+       
     });
         var app = new Vue({
-       el: "#app"
+            el: "#app",
+            data:{
+                meuTitulo:"Este é meu novo titulo"
+            }
         });
     </script>
 </body>
