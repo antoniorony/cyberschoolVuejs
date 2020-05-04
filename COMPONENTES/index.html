@@ -10,6 +10,10 @@
     <div id="app">
        <cyber-titulo v-bind:titulo = "meuTitulo"></cyber-titulo>
        <input type="text" v-model = "meuTitulo">
+       <cyber-tabela v-bind:titulos="['Titulo', 'Descrição' , 'link']" v-bind:registros="registros"></cyber-tabela>
+
+       
+
     </div>
     <script type="text/javascript">
     Vue.component('cyber-titulo', {
@@ -17,10 +21,34 @@
         template:'<h2>{{titulo}}</h2>'
        
     });
+    Vue.component('cyber-tabela', {
+        props:['registros', 'titulos'],
+        template:'<table style="width: 100%;">'+
+           '<thead>'+
+                '<tr>'+
+                ' <th v-for="titulo in titulos">{{titulo}}</th>'+
+                
+                 ' </tr>'+
+           ' </thead>'+
+            ' <tbody>'+
+                   ' <tr v-for="registro in registros">'+
+                        '<td v-for="item in registro">{{item}}</td>'+
+                        
+                    '</tr>'+
+                '</tbody>'+
+            '</table>'
+       
+    });
         var app = new Vue({
             el: "#app",
             data:{
-                meuTitulo:"Este é meu novo titulo"
+                meuTitulo:"Este é meu novo titulo", 
+                registros:[
+                    {titulo:'Titulo 1', descricao:'Cyberschool', link:"tecinova.net"},
+                    {titulo:'Titulo 2', descricao:'Cyberschool 2', link:"tecinova.net"},
+                    {titulo:'Titulo 3', descricao:'Cyberschool 3', link:"tecinova.net"},
+                    {titulo:'Titulo 4', descricao:'Cyberschool 4', link:"tecinova.net"}
+                ]
             }
         });
     </script>
