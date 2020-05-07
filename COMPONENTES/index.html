@@ -13,6 +13,23 @@
        <cyber-tabela v-bind:titulos="['Titulo', 'Descrição' , 'link']" v-bind:registros="registros"></cyber-tabela>
        <p v-once>{{meuTitulo}}</p> <!---corto as ligações com os demais--->
        <p v-html="html"></p>  <!---Exibe o html no valor da variavel html--->
+        <!----
+            TRABALHANDO COM FILTRO E TRATANDO VALORES COM VUE JS    
+        --->
+       <p>{{('R$: '+(23.983475235).toFixed(2)).replace('.',',')}} </p><!--- transformar neste valor R$ 23,98, para isso utilizo a função do javascript chamada de toFixed(x), onde x é a quantidade que quero de caracteres posteriores a virgula, além disso ele também arredonda o valor. 
+        após isso adicionei a String R$ e concatenei, e para transformar tudo em String passei ambos dentro de um paragrafo.
+        <p>{{('R$: '+(23.983475235).toFixed(2))}} </p>
+
+        após isso utilizei o replace para passar o valor do ponto para virgula, 
+
+        <p>{{('R$: '+(23.983475235).toFixed(2)).replace('.',',')}} </p>
+
+        agora vamos ver como vamos utilizar isso no VueJS, vamos tulizar um recurso chamado filtro.
+        Bom e como criamos estes filtros, bom vamos aqui na nossa aplicação, e vamos passar após o data os nossos filtros, onde criamos um filter: que possui uma variavel tratavalor que recebe uma função que vai pegar a nossa logica de tratamento e retornar o resultado que é passado pelo parâmetro da função.
+        --->
+        <p>{{23.983475235 | TrataValor}} </p> <!---
+            criado o filters e a função com a logica de tratamento, é só adicionar o valor, paipe "|" e chamar o nosso filter Tratavalor
+        --->
 
        
 
@@ -52,6 +69,11 @@
                     {titulo:'Titulo 4', descricao:'Cyberschool 4', link:"tecinova.net"}
                 ],
                 html: '<a href="#">Link via VueJS</a>'
+            }, 
+            filters:{
+                TrataValor: function(valor) {
+                    return ('R$: '+(valor).toFixed(2)).replace('.',',');
+                }
             }
         });
     </script>
