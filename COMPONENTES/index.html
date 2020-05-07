@@ -11,6 +11,8 @@
        <cyber-titulo v-bind:titulo = "meuTitulo"></cyber-titulo>
        <input type="text" v-model = "meuTitulo">
        <cyber-tabela v-bind:titulos="['Titulo', 'Descrição' , 'link']" v-bind:registros="registros"></cyber-tabela>
+       <p v-once>{{meuTitulo}}</p> <!---corto as ligações com os demais--->
+       <p v-html="html"></p>  <!---Exibe o html no valor da variavel html--->
 
        
 
@@ -48,7 +50,8 @@
                     {titulo:'Titulo 2', descricao:'Cyberschool 2', link:"tecinova.net 1"},
                     {titulo:'Titulo 3', descricao:'Cyberschool 3', link:"tecinova.net"},
                     {titulo:'Titulo 4', descricao:'Cyberschool 4', link:"tecinova.net"}
-                ]
+                ],
+                html: '<a href="#">Link via VueJS</a>'
             }
         });
     </script>
