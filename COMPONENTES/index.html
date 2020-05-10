@@ -58,13 +58,26 @@
         --->
         <p>contaMethods: Execultou: {{contaMethods}}</p>
         <p>contaComputed: Execultou: {{contaComputed}}</p>
+<!---
+Bom, quando o usuario vai usar uma determinada ação podemos criar um método, que possa ser execultado durante essa ação do usuario, assim o method vai ser executado apenas uma vez, agora se você deseja trabalhar com algum método durante a renderização do programa, ai já recomendo que utilize o computed.
+
+agora vamos começar a trabalhar com observadores, que vão ficar observando as variaveis, caso ocorra alguma alteração em alguma variavel, ele vai execultar a função na nossa aplicação.
+
+para criar um observador vamos na nossa aplicação, e vamos chamar o atributo do vuejs o watch:{}, criado-o, vamos também criar uma variavel no nossa data, vamos chamar esta variavel de 'nome', e vamos defini-la como vazia, feito isso, vamos agora ao nosso html, vou criar aqui um paragrafo com um input, e vou adicionar um v-model nele para a variavel nome, agora vou criar outra tag p, e vou adicionar um contador, para que toda vez que a minha variavel receba alguma alteração, o meu observador execute a ação de conta a minha alteração na variavel, vou adicionar uma variavel contaAlteracao, para contar, etambém vou cria-la no meu data, iniciando com 0. Agora vou no meu watch e vou adicionar a variavel que desejo observar, e nela vou atribuir uma função que vai ser executada toda vez que houcver uma ação, feito tudo isso, vamos ao navegador e testar, testado, vamos agora deixar tbm todo o texto em maiusculo, é só pegar a variavel e passar o valor do parametro com um toUpperCase();, que tudo o que for digitado na caixa de input vai tornar-se maiusculo.
+
+também pode-se observar que os méthods estão sendo executados, logo precisamos inibir essa ação dles para evitar bugs no sistema, então vamos só comentar aqui ok.
+-->
+    <p>
+        <input type="text" v-model="nome">
+    </p>
+    <p>Quantidade de Alterações: {{contaAlteracao}}</p>
        
 
     </div>
     <script type="text/javascript">
     Vue.component('cyber-titulo', {
         props:['titulo'],
-        template:'<h2>{{titulo}}</h2>'
+        template:`<h2>{{titulo}}</h2>`
        
     });
     Vue.component('cyber-tabela', {
@@ -97,7 +110,11 @@
                 ],
                 html: '<a href="#">Link via VueJS</a>', 
                 contaMethods: 0,
-                contaComputed: 0
+                contaComputed: 0,
+                contaAlteracao:0,
+                nome: '',
+               
+               
             }, 
             filters:{
                 TrataValor: function(valor) {
@@ -106,7 +123,7 @@
             },
             methods:{
                 totalValorMetodo: function(){
-                    this.contaMethods++;
+                    //this.contaMethods++;
                     var total = 0;
                     for(item of this.registros){
                         total += item.valor;
@@ -123,7 +140,14 @@
                     }
                     return total;
                 }
-            }
+            },
+            watch: {
+                nome: function(nome){
+                    this.contaAlteracao++;
+                    this.nome = nome.toUpperCase();
+                }
+            },
+           
         });
     </script>
 </body>
