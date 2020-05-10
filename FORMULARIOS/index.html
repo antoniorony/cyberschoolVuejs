@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!--  
+        Aula 14 - Formularios - text e textarea
+        bom para se utilizar dos formularios é bem simples, podemos simplesmente adicionar nossos inputs, adicionar as variaveis e usa o v-model para realizar aqui a manipulação das nossas infomações
+    -->
+    <div id="app">
+       <cyber-titulo titulo = "Formulários"> </cyber-titulo>
+        <p>Texto: {{texto}}</p>
+        <p>
+            <input type="text" v-model="texto">
+        </p>
+        <p>Textarea: {{textarea}}</p>
+        <p style="white-space: pre-line;"> {{textarea}}</p>
+        <p>
+            <textarea type="text" rows="8" cols="88" v-model="textarea"></textarea>
+        </p>
+      
+
+
+    
+       
+
+    </div>
+    <script type="text/javascript">
+    Vue.component('cyber-titulo', {
+        props:['titulo'],
+        template:`<h2>{{titulo}}</h2>`
+       
+    });
+    
+        var app = new Vue({
+            el: "#app",
+            data:{
+                texto:'',
+                textarea:'',
+               
+            }, 
+           
+        });
+    </script>
+</body>
+</html>
