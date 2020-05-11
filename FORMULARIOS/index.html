@@ -30,8 +30,23 @@
         <input type="checkbox" name="aceita" id="aceita" v-model="termos">
         <label for="aceita">{{termos}}</label>
 
+        <!--  
+        Aula 16 - Formularios - Multiple CheckBox
+        agora vamos trabalhar com multiplos checkbox, o usuario pode selecionar varios registros, para isso vamos utilizar um array.
+        -->
+        <p>Multiple Checkbox: {{notificacoes}}</p>
+        <p>
+            <input type="checkbox" name="receberEmail" id="receberEmail" value="email" v-model="notificacoes">
+            <label for="receberEmail"> Receber E-mail</label>
 
-    
+            <input type="checkbox" name="receberSms" id="receberSms" value="sms" v-model="notificacoes">
+            <label for="receberSms"> Receber SMS</label>
+
+            <input type="checkbox" name="receberTelefone" id="receberTelefone" value="tel" v-model="notificacoes">
+            <label for="receberTelefone"> Receber Ligação</label>
+
+        </p>
+        
        
 
     </div>
@@ -48,6 +63,7 @@
                 texto:'',
                 textarea:'',
                 termos:true,
+                notificacoes: [],
                
             }, 
            
