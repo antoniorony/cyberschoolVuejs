@@ -47,7 +47,17 @@
 
         </p>
         
-       
+        <!--  
+        Aula 17 - Formularios - Radios
+        agora vamos trabalhar com Radios, 
+        -->
+       <p>Radio: {{sexo}}</p>
+       <p>
+           <input type="radio" name="masculino" id="masculino" value="M" v-model="sexo">
+           <label for="masculino">Masculino</label>
+           <input type="radio" name="feminino" id="feminino" value="F" v-model="sexo">
+           <label for="feminino">Feminino</label>
+       </p>
 
     </div>
     <script type="text/javascript">
@@ -64,6 +74,7 @@
                 textarea:'',
                 termos:true,
                 notificacoes: [],
+                sexo: null,
                
             }, 
            
