@@ -22,7 +22,13 @@
         <p>
             <textarea type="text" rows="8" cols="88" v-model="textarea"></textarea>
         </p>
-      
+       <!--  
+        Aula 15 - Formularios - CheckBox
+        Vamos agora utilizar o checkbox, para ele funcionar com vue, adicionamos a variavel, e podemos defini-lo como verdadeiro ou falso.
+        -->
+        <p>Checkbox:</p>
+        <input type="checkbox" name="aceita" id="aceita" v-model="termos">
+        <label for="aceita">{{termos}}</label>
 
 
     
@@ -41,6 +47,7 @@
             data:{
                 texto:'',
                 textarea:'',
+                termos:true,
                
             }, 
            
