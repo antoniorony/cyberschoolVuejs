@@ -59,6 +59,32 @@
            <label for="feminino">Feminino</label>
        </p>
 
+       <!--  
+        Aula 18 - Formularios - Select e multiple select
+        agora vamos trabalhar com select, 
+        -->
+        <p>Select: {{ano}}</p>
+        <p>
+            <select name="ano" id="ano" v-model="ano">
+                <option disabled value="">Escolha o Ano</option>
+                <option value="2018">Ano 2018</option>
+                <option value="2019">Ano 2019</option>
+                <option value="2020">Ano 2020</option>
+                
+            </select>
+        </p>
+
+        <p>Multiple Selects: {{cores}}</p>
+        <p>
+            <select multiple name="cores" id="cores" v-model="cores">
+                <option disabled value="">Escolha as Cores</option>
+                <option >Azul</option>
+                <option >Amarelo</option>
+                <option >Vermelho</option>
+                
+            </select>
+        </p>
+
     </div>
     <script type="text/javascript">
     Vue.component('cyber-titulo', {
@@ -75,6 +101,10 @@
                 termos:true,
                 notificacoes: [],
                 sexo: null,
+                ano:2020,
+                cores:[],
+                //cores:['Amarelo'],
+                //cores:null
                
             }, 
            
