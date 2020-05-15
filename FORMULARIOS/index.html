@@ -93,8 +93,20 @@
         você digita e a variavel só receberar quando você clicar fora.
     -->
 
-    <p>Lazy: {{busca}}</p>
-    <p><input type="text" v-model.lazy="busca"></p>
+        <p>Lazy: {{busca}}</p>
+        <p><input type="text" v-model.lazy="busca"></p>
+   <!--  
+        Aula 20 - Formularios - Number
+        vamos agora trabalhar a manipulação de números
+        <input type="text" v-model="idade"> - sai tudo string para solucionar isso 
+        passamos um parametro number
+        <input type="text" v-model.number="idade">
+        mais um recurso do vuejs
+    -->
+        <p>Number: {{idade}} - Tipo: {{typeof idade}}</p>
+        <p>
+            <input type="text" v-model.number="idade">
+        </p>
 
 
     </div>
@@ -119,6 +131,7 @@
                 ano:2020,
                 cores:[],
                 busca: '',
+                idade: 45,
                
             }, 
            
