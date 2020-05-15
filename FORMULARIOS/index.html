@@ -85,7 +85,22 @@
             </select>
         </p>
 
+
+   <!--  
+        Aula 19 - Formularios - Propriedade do vue js  - lazy
+        ele da um certo atrazo no componente, isso podemos observar na digitação.
+        é bom quando você for fazer uma busca dinâmica.
+        você digita e a variavel só receberar quando você clicar fora.
+    -->
+
+    <p>Lazy: {{busca}}</p>
+    <p><input type="text" v-model.lazy="busca"></p>
+
+
     </div>
+
+
+
     <script type="text/javascript">
     Vue.component('cyber-titulo', {
         props:['titulo'],
@@ -103,8 +118,7 @@
                 sexo: null,
                 ano:2020,
                 cores:[],
-                //cores:['Amarelo'],
-                //cores:null
+                busca: '',
                
             }, 
            
