@@ -2,7 +2,7 @@
   <div class="contain">
     <div class="slider">
       <h3>Ação</h3>
-       <span  class="handle handlePrev active">
+       <span v-on:mouseover="scrollEsquerda()" v-on:mouseout="clearScroll()"  class="handle handlePrev active">
         <i class="fa fa-caret-left" aria-hidden="true"></i>
       </span>
       
@@ -133,7 +133,7 @@
          </div>
       </div>
 
-      <span onmouseover="scrollDireita()" onmouseout="clearScroll()"  class="handle handleNext active">
+      <span v-on:mouseover="scrollDireita()" v-on:mouseout="clearScroll()"  class="handle handleNext active">
         <i class="fa fa-caret-right" aria-hidden="true"></i>
       </span>
     </div>
@@ -145,7 +145,19 @@ export default {
   name: 'app',
   data () {
     return {
-      nomeProjeto: 'CyebrFlix com VUEJS'
+      nomeProjeto: 'CyebrFlix com VUEJS',
+      intervalo: null
+    }
+  },
+  methods: {
+    scrollDireita(){
+      this.intervalo = setInterval(function(){ document.getElementById('scroller').scrollLeft += 1 }  , 10);
+    },
+    scrollEsquerda(){
+      this.intervalo = setInterval(function(){ document.getElementById('scroller').scrollLeft -= 1 }  , 10);
+    },
+    learScroll(){
+      clearInterval(this.intervalo);
     }
   }
 }
@@ -168,6 +180,12 @@ IR NO GITHUB E FAZER UM CLONE.
 AULA 25 - BOM A PRIMEIRA COISA QUE VAMOS FAZER, É PEGAR O NOSSO TEMPLATE E TRANSFORMAR EM COMPONENTES
 ASSIM VAMOS REAPROVEITAR SEMPRE QUE PRECISARMOS.
 BOM ADCIONAMOS O COMPONENTE PRINCIPAL, OS CARD, E TAMBÉM O CSS.
+
+AULA 26 - MÉTODOS DE RODAR AS CATEGORIAS
+NESTA AULA VAMOS APRENDER A ADICIONAR OS METODOS DO JAVASCRIPT PURO PARA O NOSSO VUEJS
+AGORA COMO QUE VAMOS USAR AQUI, COM METHODS OU COMPUTED, BOM SE FOR CARREGAR A PAGINA O IDEAL É A AÇÃO COMPUTADA
+MAS QUANDO VAI USAR POR EXEMPLO UM BUTTON ONDE O USUARIO VAI CLICAR PARA EXECUTAR UMA AÇÃO AI SIM USA-SE O 
+METHODS, E É JUSTAMENTE POR SER O USUARIO QUE VAI REALIZAR A AÇÃO QUE VAMOS USAR OS METHODS.
   -->
 <style >
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
