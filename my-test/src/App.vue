@@ -143,11 +143,11 @@
 <script>
 import teste from './componente/teste.vue';
 
-components:{
-  teste
-}
 export default {
   name: 'app',
+  components:{
+    teste
+  },
   data () {
     return {
       nomeProjeto: 'CyebrFlix com VUEJS',
