@@ -1,7 +1,7 @@
 <template>
   <div class="contain">
     <div class="slider">
-      <h3>Ação</h3>
+      <teste titulo="Categorias"></teste>
        <span v-on:mouseover="scrollEsquerda()" v-on:mouseout="clearScroll()"  class="handle handlePrev active">
         <i class="fa fa-caret-left" aria-hidden="true"></i>
       </span>
@@ -141,6 +141,11 @@
 </template>
 
 <script>
+import teste from './componente/teste.vue';
+
+components:{
+  teste
+}
 export default {
   name: 'app',
   data () {
