@@ -9,7 +9,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style >
     h1{
         color: #f10c0c;
     }

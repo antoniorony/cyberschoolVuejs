@@ -3,10 +3,11 @@
 </template>
 
 <script>
+/*
 export default {
     name:'teste',
     props:['titulo']
-}
+}*/
 </script>
 
 <style >
