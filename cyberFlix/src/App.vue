@@ -1,7 +1,6 @@
 <template>
   <div class="contain">
-    <categoria titulo="Acao"> </categoria>
-    <categoria titulo="Suspense"> </categoria>
+    <categoria v-for="categoria in categorias" v-bind:key="categoria.id" v-bind:titulo="categoria.titulo" v-bind:filmes="categoria.filmes"> </categoria>
   </div>
 </template>
 
@@ -15,7 +14,42 @@ export default {
   data () {
     return {
       nomeProjeto: 'CyebrFlix com VUEJS',
-      intervalo: null
+      intervalo: null,
+      categorias:[
+        {
+          "id":1,
+          "titulo":"Ação",
+          "filmes":[
+            {
+              "id":1, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+            },
+            {
+              "id":2, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+            },
+            {
+              "id":3, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+            },
+            {
+              "id":4, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+            },
+            {
+              "id":5, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+            },
+            {
+              "id":6, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+            },
+            {
+              "id":7, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+            },
+            {
+              "id":8, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+            },
+            {
+              "id":9, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+            },
+          ]
+        }
+      ]
     }
   },
   components:{
