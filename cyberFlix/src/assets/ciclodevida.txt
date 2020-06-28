@@ -1,0 +1,30 @@
+Bom pessoal, vamos agora falar sobre o ciclo de vida dos componentes, 
+https://br.vyejs.org/v2/guide/instance.html 
+
+Cada instância do vue passa por uma série de etapas em sua inicialização - por exemplo, é necessário
+configurara observação de dados, compilar o template, montar a instância no DOM, atualizar o DOM quando 
+os dados forem alterados. Ao longo do caminho, ocorrerá a invocação de alguns gatilhos de ciclo de vida, 
+oferecendo a oportunidade de executar lógicas personalizadas em etapas especificas.
+
+por exemplo, o gatilho created pode ser utilizado para executar código logo após a instância ser criada:
+
+    new Vue({
+        data:{
+            s: 1
+        },
+        created: function(){
+            console.log('a é: '+this.a)
+        }
+    })
+
+    Existem outros gatilhos (hooks), chamados em diferentes etapas do ciclo de vida da instancia, 
+    como o mounted, updated e destroyed. Qualquer gatilho de ciclo de vida é executado com seu contexto 
+    this apontando para a instância Vue que o incocou.
+
+    Bom para mais detalhes vamos ao diagrama, aqui podemos observar onde cada método execulta.
+
+    no created - eu busco os arquivos do meu beckend, para preencher minha aplicação, para mais explicações
+    sobre estes métodos podemos clicar aqui no nome deles, que é o link para a página especifica de cada um 
+    deles.
+
+    bom vamos ver um exemplo sendo utilizado no nosso componente principal o App.vue

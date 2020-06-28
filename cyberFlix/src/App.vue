@@ -55,7 +55,17 @@ export default {
   components:{
     Categoria
   },
-  
+  //além da forma que apresentei a pouco, também podemos utiliza-los da seguinte forma
+  //se formos no navegador e abrirmos o console, podemos observar que ele executou estas funções
+  beforeCreate() {
+    console.log('beforeCreate');
+  },
+  created() {
+    console.log('created');
+  },
+  beforeMount() {
+    console.log('beforeMount')
+  },
 }
 </script>
 <!--
