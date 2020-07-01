@@ -15,11 +15,8 @@ export default {
     return {
       nomeProjeto: 'CyebrFlix com VUEJS',
       intervalo: null,
-      categorias:[
-        
-          ]
-        }
-      ]
+      categorias: null
+     
     }
   },
   components:{
@@ -31,7 +28,9 @@ export default {
     console.log('beforeCreate');
   },
   created() {
-    console.log('created');
+    this.$http.get('http://localhost:3000/categorias').then(res => {
+      this.categorias = res.body;
+    });
   },
   beforeMount() {
     console.log('beforeMount')

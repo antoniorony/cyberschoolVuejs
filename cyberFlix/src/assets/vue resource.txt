@@ -1,0 +1,2 @@
+Agora para trabalhar com requisição http, vamos utilizar o vue resource
+https://github.com/pagekit/vue-resource
