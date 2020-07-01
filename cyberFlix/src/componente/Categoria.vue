@@ -36,7 +36,7 @@ export default {
         const self = this;
       this.intervalo = setInterval(function(){ self.$refs.scroller.scrollLeft -= 1 }  , 10);
     },
-    learScroll(){
+    clearScroll(){
       clearInterval(this.intervalo);
     }
   }

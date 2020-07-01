@@ -1,0 +1,40 @@
+{
+    "categorias": [
+      {
+        "id":1,
+        "titulo":"Ação",
+        "filmes":[
+          {
+            "id":1, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+          },
+          {
+            "id":2, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+          },
+          {
+            "id":3, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+          },
+          {
+            "id":4, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+          },
+          {
+            "id":5, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+          },
+          {
+            "id":6, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+          },
+          {
+            "id":7, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+          },
+          {
+            "id":8, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+          },
+          {
+            "id":9, "titulo":"Vingadores: Guerra Infinita", "imagem":"https://cdn-istoe-ssl.akamaized.net/wp-content/uploads/sites/14/2017/11/vingadores-guerra-infinita.jpg"
+          }
+        ]
+      }
+    ]
+  }
+        
+    
+  

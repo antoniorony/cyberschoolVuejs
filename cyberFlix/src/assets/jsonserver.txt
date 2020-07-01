@@ -1,0 +1,4 @@
+criar um arquivo json server, usar apenas para testes.
+
+ir no link: https://github.com/typicode/json-server
+
