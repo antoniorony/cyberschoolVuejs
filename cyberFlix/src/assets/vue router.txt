@@ -1,0 +1,3 @@
+Nesta aula 34 vamos utilizar o vue router 
+segue o link: 
+https://router.vuejs.org/installation.html#direct-download-cdn
