@@ -1,0 +1,25 @@
+bom como vamos prepara-lo para o servidor, bom para isso vou rodar um comando 
+
+lá no packege.json, temos o dev 
+e o build 
+o build me permite roda-lo para produção
+
+então vamos lá 
+
+npm run build
+
+com este comando o node vai gerar um diretorio com o sscripts que vamos usar em produção
+
+para isso vamos pegar a pasta build e o arquivo index.html e vamos enviar ao servidor, para simularmos isso
+nós vamos criar um novo diretorio e vamos chamar como servidor e vamos imagianr que esta pasta seja o nosso 
+servidor, e vou subir os arquivos para este servidor, copio o dist e o index.html, bom agora vamos imaginar 
+que seja um servidor php, então vamos lá no servidor, e vamos rodar com o servidor php.
+
+php -S localhost:8099
+
+agora o servidor está rodando, vamos no navegador e como podemos ver, ele está funcionando perfeitamente.
+se eu parar meu servidor json podem ver que ele não vai carregar.
+
+bom pessoal aqui é apenas um exemplo.
+
+bom pessoal, encerramos aqui o nosso curso, e aguardo vocês no nosso próximo curso, até mais pessoal.
